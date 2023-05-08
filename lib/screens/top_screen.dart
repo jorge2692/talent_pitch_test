@@ -119,6 +119,7 @@ class _TopScreenState extends State<TopScreen> {
         children: [
           TextButton(
             style: TextButton.styleFrom(
+              padding: EdgeInsets.symmetric(horizontal: 16),
                 backgroundColor: MyColors.primaryOpacityColorTwo,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             ),
@@ -127,6 +128,7 @@ class _TopScreenState extends State<TopScreen> {
           ),
           TextButton(
             style: TextButton.styleFrom(
+              padding: EdgeInsets.symmetric(horizontal: 16),
               backgroundColor: MyColors.primaryOpacityColorTwo,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             ),
@@ -135,6 +137,7 @@ class _TopScreenState extends State<TopScreen> {
           ),
           TextButton(
             style: TextButton.styleFrom(
+              padding: EdgeInsets.symmetric(horizontal: 16),
               backgroundColor: MyColors.primaryOpacityColorTwo,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             ),
