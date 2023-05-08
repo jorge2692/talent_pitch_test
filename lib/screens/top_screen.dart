@@ -115,7 +115,7 @@ class _TopScreenState extends State<TopScreen> {
       width: double.infinity,
       margin: const EdgeInsets.only(right: 20, bottom: 15),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           TextButton(
             style: TextButton.styleFrom(
