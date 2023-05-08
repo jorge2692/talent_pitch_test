@@ -1,6 +1,7 @@
 # talent_pitch_test
 
-A new Flutter project.
+Flutter project: talent pitch technical test.
+Created with Flutter version 3.7.12 and Dart version 2.19.6.
 
 ## Getting Started
 
