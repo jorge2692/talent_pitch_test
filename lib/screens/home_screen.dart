@@ -40,12 +40,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         showUnselectedLabels: true,
         unselectedItemColor: MyColors.primaryOpacityColor,
         unselectedIconTheme: IconThemeData(
           color: MyColors.primaryOpacityColor,
         ),
-        items: const <BottomNavigationBarItem>[
+        items:  <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined,),
             label: 'Inicio',
@@ -55,7 +56,13 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Conétacte',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mic_none_outlined),
+            icon: Container(
+              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: MyColors.secondColor,
+              ),
+                child: Icon(Icons.mic_none_outlined, color: Colors.white,)),
             label: '',
           ),
           BottomNavigationBarItem(
