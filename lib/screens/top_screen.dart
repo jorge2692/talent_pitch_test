@@ -87,14 +87,24 @@ class _TopScreenState extends State<TopScreen> {
 
   Widget _textFieldSearch(){
     return Container(
-      width:double.infinity,
+      width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 24),
-      margin: const EdgeInsets.only(right: 20,),
-      child: const TextField(style: TextStyle(fontSize: 12),
+      margin: const EdgeInsets.only(
+        right: 20,
+      ),
+      child: TextField(
+        style: const TextStyle(fontSize: 12),
         decoration: InputDecoration(
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(
+            borderSide: BorderSide(),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: MyColors.primaryColor),
+          ),
           labelText: 'Buscar listas por sus nombres',
-          prefixIcon: Icon(Icons.search,),
+          prefixIcon: const Icon(
+            Icons.search,
+          ),
         ),
       ),
     );
