@@ -10,14 +10,14 @@ import 'package:talent_pitch_test/models/list_talent_model.dart';
 import 'package:talent_pitch_test/widget/top_general_card.dart';
 
 
-class topScreen extends StatefulWidget {
-  const topScreen({Key? key}) : super(key: key);
+class TopScreen extends StatefulWidget {
+  const TopScreen({Key? key}) : super(key: key);
 
   @override
-  State<topScreen> createState() => _topScreenState();
+  State<TopScreen> createState() => _TopScreenState();
 }
 
-class _topScreenState extends State<topScreen> {
+class _TopScreenState extends State<TopScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class _topScreenState extends State<topScreen> {
                 labelColor: MyColors.secondColor,
                 unselectedLabelColor: MyColors.primaryColor.withOpacity(0.15),
                 indicatorColor: MyColors.secondColor,
-                tabs: <Widget>[
+                tabs: const <Widget>[
                   Tab(
                     text: 'Top del dia',
                   ),
@@ -52,29 +52,25 @@ class _topScreenState extends State<topScreen> {
               ),
               Expanded(child: TabBarView(
                 children: <Widget>[
+                  const NullDataNavigation(namePages: 'Top del dia', numberIcon: 0xf44d,),
+                  const NullDataNavigation(namePages: 'Top del mes', numberIcon: 0xf051f,),
                   Container(
-                    child: NullDataNavigation(namePages: 'Top del dia', NumberIcon: 0xf44d,),
-                  ),
-                  Container(
-                    child: NullDataNavigation(namePages: 'Top del mes', NumberIcon: 0xf051f,),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 20),
+                    margin: const EdgeInsets.only(left: 20),
                     child: SingleChildScrollView(
                       child: Column(
                         children: [
                           _textFieldSearch(),
                           _textButtonOptions(),
-                          Titles(Titulo: 'Matches con talentos',),
+                          const Titles(title: 'Matches con talentos',),
                           gridViewBuilderCardsImage(),
-                          Titles(Titulo: 'Reacciones a Talentos',),
-                          TalentCards(),
-                          SizedBox(height: 24,),
-                          Titles(Titulo: 'Reacciones a Organizaciones',),
-                          OrganizationCards(),
-                          SizedBox(height: 24,),
-                          Titles(Titulo: 'Reacciones a Vacantes',),
-                          VacantCards(),
+                          const Titles(title: 'Reacciones a Talentos',),
+                          talentCards(),
+                          const SizedBox(height: 24,),
+                          const Titles(title: 'Reacciones a Organizaciones',),
+                          organizationCards(),
+                          const SizedBox(height: 24,),
+                          const Titles(title: 'Reacciones a Vacantes',),
+                          vacantCards(),
                         ],
                       ),
                     ),
@@ -92,9 +88,9 @@ class _topScreenState extends State<topScreen> {
   Widget _textFieldSearch(){
     return Container(
       width:double.infinity,
-      padding: EdgeInsets.symmetric(vertical: 24),
-      margin: EdgeInsets.only(right: 20,),
-      child: TextField(style: TextStyle(fontSize: 12),
+      padding: const EdgeInsets.symmetric(vertical: 24),
+      margin: const EdgeInsets.only(right: 20,),
+      child: const TextField(style: TextStyle(fontSize: 12),
         decoration: InputDecoration(
           border: OutlineInputBorder(),
           labelText: 'Buscar listas por sus nombres',
@@ -107,7 +103,7 @@ class _topScreenState extends State<topScreen> {
   Widget _textButtonOptions(){
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.only(right: 20, bottom: 15),
+      margin: const EdgeInsets.only(right: 20, bottom: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -140,11 +136,11 @@ class _topScreenState extends State<topScreen> {
     );
   }
 
-  Widget TalentCards(){
-    return Container(
+  Widget talentCards(){
+    return SizedBox(
       height: 150,
       child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             childAspectRatio: 0.3,
             crossAxisCount: 2,
             crossAxisSpacing: 15,
@@ -160,11 +156,11 @@ class _topScreenState extends State<topScreen> {
     );
   }
 
-  Widget OrganizationCards(){
-    return Container(
+  Widget organizationCards(){
+    return SizedBox(
       height: 150,
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 0.3,
           crossAxisCount: 2,
           crossAxisSpacing: 15,
@@ -180,11 +176,11 @@ class _topScreenState extends State<topScreen> {
     );
   }
 
-  Widget VacantCards(){
-    return Container(
+  Widget vacantCards(){
+    return SizedBox(
       height: 150,
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 0.3,
           crossAxisCount: 2,
           crossAxisSpacing: 15,
@@ -202,10 +198,10 @@ class _topScreenState extends State<topScreen> {
 
 
   Widget gridViewBuilderCardsImage(){
-    return Container(
+    return SizedBox(
       height: 200,
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 1.3,
           crossAxisCount: 1,
           crossAxisSpacing: 15,

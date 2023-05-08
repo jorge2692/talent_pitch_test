@@ -23,10 +23,10 @@ class _MyAppState extends State<MyApp> {
       title: 'Test App',
       initialRoute: 'home',
       routes: {
-        'home': (BuildContext context) => homeScreen(),
-        'connect': (BuildContext context) => connectScreen(),
-        'top': (BuildContext context) => topScreen(),
-        'profile': (BuildContext context) => profileScreen(),
+        'home': (BuildContext context) => const HomeScreen(),
+        'connect': (BuildContext context) => const ConnectScreen(),
+        'top': (BuildContext context) => const TopScreen(),
+        'profile': (BuildContext context) => const ProfileScreen(),
 
       },
     );

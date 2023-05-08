@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class NetworkImageCard extends StatelessWidget {
 
-  String ImageNet;
+  final String imageNet;
 
-  NetworkImageCard({Key? key, required this.ImageNet}) : super(key: key);
+  const NetworkImageCard({Key? key, required this.imageNet}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 74,
       height: 133,
-      child: Image.network(ImageNet,fit: BoxFit.fill,)
+      child: Image.network(imageNet,fit: BoxFit.fill,)
     );
   }
 }

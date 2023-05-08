@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:talent_pitch_test/widget/null_data_navigation.dart';
 
-class initialScreen extends StatefulWidget {
-  const initialScreen({Key? key}) : super(key: key);
+class InitialScreen extends StatefulWidget {
+  const InitialScreen({Key? key}) : super(key: key);
 
   @override
-  State<initialScreen> createState() => _initialScreenState();
+  State<InitialScreen> createState() => _InitialScreenState();
 }
 
-class _initialScreenState extends State<initialScreen> {
+class _InitialScreenState extends State<InitialScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: NullDataNavigation(namePages: 'Inicio', NumberIcon: 0xf107,),
+    return const Scaffold(
+      body: NullDataNavigation(namePages: 'Inicio', numberIcon: 0xf107,),
     );
   }
 }

@@ -7,14 +7,14 @@ import 'package:talent_pitch_test/screens/top_screen.dart';
 import 'package:talent_pitch_test/utils/my_colors.dart';
 
 
-class homeScreen extends StatefulWidget {
-  const homeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<homeScreen> createState() => _homeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _homeScreenState extends State<homeScreen> {
+class _HomeScreenState extends State<HomeScreen> {
 
   int _selectedIndex = 3;
 
@@ -31,12 +31,12 @@ class _homeScreenState extends State<homeScreen> {
     return Scaffold(
       body: IndexedStack(
           index: _selectedIndex,
-          children: [
-            initialScreen(),
-            connectScreen(),
+          children: const [
+            InitialScreen(),
+            ConnectScreen(),
             PitchScreen(),
-            topScreen(),
-            profileScreen(),
+            TopScreen(),
+            ProfileScreen(),
           ],
         ),
       bottomNavigationBar: BottomNavigationBar(

@@ -7,7 +7,7 @@ class TopGeneralCard extends StatelessWidget {
   final int icon;
   final String colorBack;
   final int colorIcon;
-  TopGeneralCard({Key? key, required this.title, required this.colorBack, required this.colorIcon, required this.icon, required this.subtitle}) : super(key: key);
+  const TopGeneralCard({Key? key, required this.title, required this.colorBack, required this.colorIcon, required this.icon, required this.subtitle}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class TopGeneralCard extends StatelessWidget {
           ),
           child: Icon(IconData(icon, fontFamily: 'MaterialIcons'), color: Color(colorIcon)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 8,
         ),
         Expanded(
@@ -32,8 +32,8 @@ class TopGeneralCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title,style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 12),),
-                SizedBox(height: 5),
+                Text(title,style: const TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 12),),
+                const SizedBox(height: 5),
                 Text(subtitle,style: TextStyle(color: MyColors.primaryOpacityColor,  fontWeight: FontWeight.bold, fontSize: 12),),
               ],
             ),

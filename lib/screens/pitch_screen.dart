@@ -6,8 +6,8 @@ class PitchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: NullDataNavigation(namePages: 'Pitch Talent', NumberIcon: 0xf1c9,),
+    return const Scaffold(
+      body: NullDataNavigation(namePages: 'Pitch Talent', numberIcon: 0xf1c9,),
     );
   }
 }

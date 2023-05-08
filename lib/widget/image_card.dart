@@ -22,7 +22,7 @@ class ImageCard extends StatelessWidget {
             width: 138,
             height: 133,
             decoration: const BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(8)),
+              borderRadius: BorderRadius.all(Radius.circular(8)),
               color: Colors.black26,
             ),
             child: ClipRRect(
@@ -34,11 +34,11 @@ class ImageCard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          NetworkImageCard(ImageNet: link1,),
+                          NetworkImageCard(imageNet: link1,),
                           Column(
                             children: [
-                              NetworkImageCardLittle(ImageURL: link2),
-                              NetworkImageCardLittle(ImageURL: link3),
+                              NetworkImageCardLittle(imageURL: link2),
+                              NetworkImageCardLittle(imageURL: link3),
                             ],
                           ),
                         ],
@@ -52,16 +52,16 @@ class ImageCard extends StatelessWidget {
                     child: CircleAvatar(
                       radius: 12,
                       backgroundColor: MyColors.secondColor, //<-- SEE HERE
-                      child: Icon(Icons.play_circle_outline, color: Colors.white,size: 16,),
+                      child: const Icon(Icons.play_circle_outline, color: Colors.white,size: 16,),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          SizedBox(height: 8),
-          Text(name, style: TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
+          Text(name, style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),),
+          const SizedBox(height: 8),
           Text(match,style: TextStyle(color: MyColors.primaryOpacityColor,  fontSize: 12, fontWeight: FontWeight.bold),),
         ],
       );
